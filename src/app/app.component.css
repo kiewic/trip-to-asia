@@ -2,6 +2,25 @@
   font-family: Lucida, sans-serif;
 }
 
-table, td {
+table {
+  margin: 0 auto 0 auto;
+}
+
+td {
   font-size: small;
+}
+
+tbody td {
+  text-align: right;
+}
+
+table .style1 {
+  background-color: #7FDBFF;
+  color: hsla(197, 100%, 20%, 1.0);
+
+}
+
+table .style2 {
+  background-color: #01FF70;
+  color: hsla(146, 100%, 20%, 1.0);
 }

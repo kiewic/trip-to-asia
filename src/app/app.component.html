@@ -5,20 +5,26 @@
   </h1>
 </div>
 <table>
+  <thead>
   <tr>
+      <th>Date</th>
       <th>Local Time</th>
       <th>Seattle</th>
-      <th>Japan</th>
-      <th>South Korea</th>
       <th>China</th>
+      <th>South Korea</th>
+      <th>Japan</th>
   </tr>
+  </thead>
+  <tbody>
   <tr *ngFor="let rangeItem of range">
-      <td>{{rangeItem.local}}</td>
-      <td>{{rangeItem.seattle}}</td>
-      <td>{{rangeItem.japan}}</td>
-      <td>{{rangeItem.korea}}</td>
-      <td>{{rangeItem.china}}</td>
+      <td [ngClass]="{'style1': rangeItem.dateClass == 0,'style2': rangeItem.dateClass == 1}">{{rangeItem.date}}</td>
+      <td [ngClass]="{'style1': rangeItem.localClass == 0,'style2': rangeItem.localClass == 1}">{{rangeItem.local}}</td>
+      <td [ngClass]="{'style1': rangeItem.seattleClass == 0,'style2': rangeItem.seattleClass == 1}">{{rangeItem.seattle}}</td>
+      <td [ngClass]="{'style1': rangeItem.chinaClass == 0,'style2': rangeItem.chinaClass == 1}">{{rangeItem.china}}</td>
+      <td [ngClass]="{'style1': rangeItem.koreaClass == 0,'style2': rangeItem.koreaClass == 1}">{{rangeItem.korea}}</td>
+      <td [ngClass]="{'style1': rangeItem.japanClass == 0,'style2': rangeItem.japanClass == 1}">{{rangeItem.japan}}</td>
   </tr>
+  </tbody>
 </table>
 
 <router-outlet></router-outlet>
