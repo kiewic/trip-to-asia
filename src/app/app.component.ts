@@ -82,7 +82,7 @@ export class AppComponent {
       const min = moment.min(local, seattle, china, korea, japan);
 
       this.range.push({
-        date: min.format('ll'),
+        date: min.format('ddd, MMM D, YYYY'),
         local: local.format('LTS'),
         seattle: seattle.format('LTS'),
         china: china.format('LTS'),
