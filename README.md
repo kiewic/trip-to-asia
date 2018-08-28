@@ -25,3 +25,15 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## GitHub Pages deployment
+
+With Angular CLI 6 the build artifacts will be put in a subfolder under dist, [read more here](https://www.npmjs.com/package/angular-cli-ghpages#usage-with-angular-cli-6-or-higher).
+
+```bash
+npm i -g angular-cli-ghpages
+
+ng build --prod --base-href "/trip-to-asia/"
+
+ngh --dir=dist/trip-to-asia --branch=gh-pages
+```
