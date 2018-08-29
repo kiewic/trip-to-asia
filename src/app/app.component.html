@@ -17,12 +17,12 @@
   </thead>
   <tbody>
   <tr *ngFor="let rangeItem of range">
-      <td [ngClass]="{'style1': rangeItem.dateClass == 0,'style2': rangeItem.dateClass == 1}">{{rangeItem.date}}</td>
-      <td [ngClass]="{'style1': rangeItem.localClass == 0,'style2': rangeItem.localClass == 1}">{{rangeItem.local}}</td>
-      <td [ngClass]="{'style1': rangeItem.seattleClass == 0,'style2': rangeItem.seattleClass == 1}">{{rangeItem.seattle}}</td>
-      <td [ngClass]="{'style1': rangeItem.chinaClass == 0,'style2': rangeItem.chinaClass == 1}">{{rangeItem.china}}</td>
-      <td [ngClass]="{'style1': rangeItem.koreaClass == 0,'style2': rangeItem.koreaClass == 1}">{{rangeItem.korea}}</td>
-      <td [ngClass]="{'style1': rangeItem.japanClass == 0,'style2': rangeItem.japanClass == 1}">{{rangeItem.japan}}</td>
+      <td my-td [dateCell]="rangeItem.date" [ngClass]="rangeItem.date.className"></td>
+      <td my-td [dateCell]="rangeItem.local" [ngClass]="rangeItem.local.className"></td>
+      <td my-td [dateCell]="rangeItem.seattle" [ngClass]="rangeItem.seattle.className"></td>
+      <td my-td [dateCell]="rangeItem.china" [ngClass]="rangeItem.china.className"></td>
+      <td my-td [dateCell]="rangeItem.korea" [ngClass]="rangeItem.korea.className"></td>
+      <td my-td [dateCell]="rangeItem.japan" [ngClass]="rangeItem.japan.className"></td>
   </tr>
   </tbody>
 </table>
