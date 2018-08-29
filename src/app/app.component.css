@@ -4,6 +4,7 @@
 
 table {
   margin: 0 auto 0 auto;
+  border-collapse: collapse;
 }
 
 td {
@@ -12,15 +13,35 @@ td {
 
 tbody td {
   text-align: right;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+tbody td.highlight {
+  border: 2px solid #FF851B;
 }
 
 table .style1 {
   background-color: #7FDBFF;
+  opacity: 0.5;
   color: hsla(197, 100%, 20%, 1.0);
-
 }
 
 table .style2 {
   background-color: #01FF70;
+  opacity: 0.5;
   color: hsla(146, 100%, 20%, 1.0);
 }
+
+table .opaque.style1 {
+  opacity: 1;
+}
+
+table .opaque.style2 {
+  opacity: 1;
+}
+
+/* table .styleGreen {
+  background-color: #2ECC40;
+  color: hsla(127, 63%, 15%, 1.0);
+} */
