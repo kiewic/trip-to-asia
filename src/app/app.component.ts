@@ -77,6 +77,8 @@ export class AppComponent {
       }, {
         start: moment.utc('2018-09-24T11:35:00-07:00'),
         seattle: true,
+      }, {
+        start: moment.utc('2018-09-24T13:00:00-07:00'),
       },
     ];
     // console.log(myLocations[9].start.clone().tz('America/Los_Angeles').toString());
@@ -123,7 +125,7 @@ export class AppComponent {
         },
         local: {
           content: local.format('LTS'),
-          classNames: [local.dayOfYear() % 2 ? 'style1' : 'style2'],
+          classNames: [local.dayOfYear() % 2 ? 'style1' : 'style2', 'opaque'],
         },
         seattle: {
           content: seattle.format('LTS'),
